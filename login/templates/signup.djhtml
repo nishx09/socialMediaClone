@@ -1,0 +1,20 @@
+{% extends 'base.djhtml' %}
+
+{% block title %}Signup Page{% endblock %}
+
+{% block middle_column %}
+    <div class="w3-card w3-round w3-white">
+        <div class="w3-container w3-padding">
+            <h3>Create new account:</h3><br>
+            <form method="post" id="create_form" action="{% url 'login:create_view' %}">
+                {% csrf_token %}
+                {{ create_form }}
+                <br><br>
+                <input type="submit" value="SignUp" /><br><br>
+            </form>
+            {% if create_failed %}
+                <p style="color:red"> Invalid username or password </p>
+            {% endif %}
+        </div>
+    </div><br>
+{% endblock %}

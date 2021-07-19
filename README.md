@@ -1,4 +1,4 @@
-# CS 1XA3 Project03 - gargn4
+# CS 1XA3 Project - Social Media Clone
 
 ## Usage
 Install Conda environment with `conda create -n djangoenv python=3.7` and then install django in that environment using `conda install -c anaconda django`.
